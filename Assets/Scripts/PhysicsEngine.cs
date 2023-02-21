@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PhysicsEngine : MonoBehaviour
 {
-    [SerializeField] public float mass = 1f;
-    [SerializeField] public Vector3 velocityVector; // Average velocity this FixedUpdate()
-    [SerializeField] [ReadOnlyInspector] public Vector3 netForceVector;
+    [SerializeField] public float mass = 1f;        // [kg]
+    [SerializeField] public Vector3 velocityVector; // [m/s] -> [m x s^-1]
+    [ReadOnlyInspector]
+    [SerializeField] public Vector3 netForceVector; // kN -> [kg x m x s^-2]
     [SerializeField] public bool showTrails = true;
     
     private List<Vector3> _forceVectorList = new List<Vector3>();
